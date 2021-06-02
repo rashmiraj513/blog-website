@@ -14,8 +14,10 @@ const aboutContent = "This is a blogging website. Here, you can write anything t
 const contactContent = "Since, this website is made for only fun purposes. Hence, you can't contact the owner of this website. You can leave a message so that he can read that and reach out to you if he thinks that is necessary. By the way, this website is made for only intentions of fun, so keep enjoying and keep blogging your memories so that later time, you can read them, find them and re-live them. This website is made with HTML5, CSS3, Bootstrap4, JavaScript, Node.js, Express server, MongoDB database, MongoDB Atlas cloud services and this website is deployed on Heroku services. ";
 
 // connecting to the mongodb database...
-mongoose.connect("mongodb://localhost:27017/blogWebsite", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/blogWebsite", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-rashmi:XwLQ7k5k*UkT4ZT@todolist.asvvi.mongodb.net/blogWebsite?retryWrites=true&w=majority", {useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false});
 
+// mongoose.connect("mongodb+srv://admin-rashmi:XwLQ7k5k*UkT4ZT@todolist.asvvi.mongodb.net/blogWebsite?retryWrites=true&w=majority")
 const postSchema = new mongoose.Schema({
     title: String,
     content: String
@@ -73,3 +75,5 @@ app.get("/compose", function(req, res) {
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server is started on port 3000.");
 })
+
+// https://sleepy-beach-07889.herokuapp.com/ ----> Heroku web application link for this project.
