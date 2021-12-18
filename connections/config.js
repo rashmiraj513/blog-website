@@ -12,9 +12,7 @@ const clusterURL = process.env.URL;
 const uri = "mongodb+srv://" + user + ":" + password + "@" + clusterURL + db + "?retryWrites=true&w=majority";
 
 // connecting to the database...
-mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}, () =>
-    console.log("Connected to the cloud database...")
-);
+mongoose.connect(uri, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
 
 const dbConnection = mongoose.connection;
 
