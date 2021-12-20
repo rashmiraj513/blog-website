@@ -1,12 +1,16 @@
 <%- include("partials/header") %> 
-<h1>Compose</h1>
-<form action="/compose" method="POST">
-    <div class="form-group">
-        <label for="inputText">Title</label>
-        <input type="text" name="postTitle" id="inputText" class="form-control" autocomplete="on" autocapitalize="on"><br>
-        <label for="inputTextArea">Post</label>
-        <textarea cols="30" rows="10" name="postBody" id="inputTextArea" class="form-control" autocomplete="on" autocapitalize="on"></textarea>
+<section id="compose" class="compose">
+    <div class="container">
+        <h1 style="padding-bottom: 1rem;">Compose</h1>
+        <form action="/compose" method="POST">
+            <div class="form-group">
+                <label for="inputText"><h6>Title</h6></label>
+                <input type="text" name="postTitle" id="inputText" class="form-control" autocomplete="on" autocapitalize="on"><br>
+                <label for="inputTextArea"><h6>Post</h6></label>
+                <textarea cols="30" rows="10" name="postBody" id="inputTextArea" class="form-control" autocomplete="on" autocapitalize="on"></textarea>
+            </div><br>
+            <button type="submit" class="btn btn-lg btn-primary">Publish</button>
+        </form>
     </div>
-    <button type="submit" class="btn btn-lg btn-primary">Publish</button>
-</form>
+</section>
 <%- include("partials/footer") %> 
